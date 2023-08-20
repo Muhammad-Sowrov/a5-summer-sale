@@ -295,7 +295,7 @@
                             <P class="text-2xl font-medium mb-4">Discount : <span id="discount">00</span>TK</P>
                             <P class="text-2xl font-medium mb-4">Total: <span id="total">00</span>TK</P>
                             <!-- Open the modal using ID.showModal() method -->
-                            <button class="btn-pri w-full font-semibold" onclick="my_modal_1.showModal()">Make Purchase</button>
+                            <button id="purchase" class="btn-pri w-full font-semibold" onclick="my_modal_1.showModal(this)">Make Purchase</button>
                             <dialog id="my_modal_1" class="modal text-center items-center py-28">
                                 <form method="dialog" class="modal-box">
                                     <div class="items-center text-center">
@@ -304,7 +304,7 @@
                                     <p class="py-4 text-center">Your Purchase the product</p>
                                     </div>
                                     <div class="text-center">
-                                        <button class="btn-pri text-center">Go Home</button>
+                                        <button id="home" class="btn-pri text-center">Go Home</button>
                                     </div>
                                 </form>
                             </dialog>

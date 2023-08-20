@@ -25,3 +25,10 @@ function handleClickApply(read){
     }
 
 }
+const idOfPurchase = document.getElementById('purchase');
+const idOfHome = document.getElementById('home');
+idOfPurchase.addEventListener('click', function(){
+    idOfHome.addEventListener('click', function(){
+        window.location.reload();
+    })
+})
