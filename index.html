@@ -275,25 +275,25 @@
             </div>
             <div class="w-auto h-auto">
                 <div>
-                    <div class=" bg-base-100 shadow-xl mb-5">
+                    <div class=" bg-base-100 shadow-xl mb-10">
                         <div class="bg-white">
                             <h2 class="font-medium text-2xl mb-4">Have coupon?</h2>
                             <div class="card-actions flex justify-end">
-                                <input type="text" class="coupon-field pl-4" placeholder="Coupon code">
-                                <button class="btn-pri">Apply</button>
+                                <input id="input-coupon" type="text" class="coupon-field pl-4" placeholder="Coupon code">
+                                <button onclick="handleClickApply(this)" class="btn-pri">Apply</button>
                             </div>
                         </div>
                     </div>
-                    <div id="" class="selected-item text-2xl font-medium">
+                    <div class="selected-item text-2xl font-medium mb-10">
                         <ol id="selected-item" class="list-decimal list-inside">
 
                         </ol>
                     </div>
                     <div class=" bg-base-100 shadow-xl">
                         <div class="bg-white">
-                            <P class="text-2xl font-medium mb-4">Total price: <span>00</span>TK</P>
-                            <P class="text-2xl font-medium mb-4">Discount : <span>00</span>TK</P>
-                            <P class="text-2xl font-medium mb-4">Total: <span>00</span>TK</P>
+                            <P class="text-2xl font-medium mb-4">Total price: <span id="total-price">00</span>TK</P>
+                            <P class="text-2xl font-medium mb-4">Discount : <span id="discount">00</span>TK</P>
+                            <P class="text-2xl font-medium mb-4">Total: <span id="total">00</span>TK</P>
                             <!-- Open the modal using ID.showModal() method -->
                             <button class="btn-pri w-full font-semibold" onclick="my_modal_1.showModal()">Make Purchase</button>
                             <dialog id="my_modal_1" class="modal text-center items-center py-28">
@@ -315,9 +315,7 @@
         </section>
     </main>
     <footer>
-        <!-- <div class="">
-            <button class="btn-pri w-full font-semibold">Make Purchase</button>
-        </div> -->
+
     </footer>
     <script src="script/index.js"></script>
 </body>
