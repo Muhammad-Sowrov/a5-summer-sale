@@ -1,5 +1,5 @@
 let totalPrice = 0;
-function handleClickDiv(target){
+function handleClickDiv(target) {
     const selectedItem = document.getElementById('selected-item');
     const cartName = target.parentNode.childNodes[1].childNodes[3].childNodes[3].innerText;
     const liOl = document.createElement('li')
@@ -10,11 +10,10 @@ function handleClickDiv(target){
     totalPrice = parseInt(totalPrice) + parseInt(productPrice);
     document.getElementById('total-price').innerText = totalPrice;
 }
-
-function handleClickApply(read){
+function handleClickApply(read) {
     const inputField = document.getElementById('input-coupon');
     const couponS = inputField.value;
-    if(couponS === 'SELL200'){
+    if (couponS === 'SELL200' && totalPrice > 200) {
         let discount;
         discount = totalPrice * 0.2;
         let p = discount.toFixed(2);
@@ -27,8 +26,8 @@ function handleClickApply(read){
 }
 const idOfPurchase = document.getElementById('purchase');
 const idOfHome = document.getElementById('home');
-idOfPurchase.addEventListener('click', function(){
-    idOfHome.addEventListener('click', function(){
+    idOfPurchase.addEventListener('click', function () {
+    idOfHome.addEventListener('click', function () {
         window.location.reload();
     })
 })
